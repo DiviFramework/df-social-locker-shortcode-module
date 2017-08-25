@@ -1,0 +1,20 @@
+{
+    "name": "diviframework/df-social-locker-shortcode-module",
+    "description": "A Social Locker Divi Shortcode Module",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Divi Framework",
+            "email": "support@diviframework.com"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "~3.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "DF\\SocialLocker\\" : "src/"
+        }
+    }
+}
