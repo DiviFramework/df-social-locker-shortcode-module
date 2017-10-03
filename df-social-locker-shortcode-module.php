@@ -7,16 +7,16 @@
  * Author URI:      https://www.diviframework.com
  * Text Domain:     df-social-locker-shortcode-module
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.1
  *
- * @package         
+ * @package
  */
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_VERSION', '0.1.0');
+define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_VERSION', '1.0.1');
 define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_DIR', __DIR__);
 define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_URL', plugins_url('/'.basename(__DIR__)));
 
