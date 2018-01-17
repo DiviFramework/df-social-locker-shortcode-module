@@ -23,33 +23,22 @@ class Plugins
      */
     public function checkDependancies()
     {
-        $plugins = array(
-            'social-locker/sociallocker-next.php' => 'Social Locker',
-        );
+        include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
-        foreach ($plugins as $plugin => $niceName) {
-            $this->checkDependancy($plugin, $niceName);
+        $is_free_version_active = is_plugin_active('social-locker/sociallocker-next.php');
+        $is_pro_version_active = is_plugin_active('sociallocker-next-premium/sociallocker-next.php');
+
+        if ($is_free_version_active || $is_pro_version_active) {
+            return;
         }
-    }
 
-    /**
-     * Check if dependant plugin is active. If not show an admin notice.
-     */
-    public function checkDependancy($plugin, $niceName)
-    {
-        if (is_admin()) {
-            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-            
-            if (!is_plugin_active($plugin)) {
-                $container = $this->container;
+        $container = $this->container;
 
-                add_action('admin_notices', function () use ($niceName, $container) {
-                    $class = 'notice notice-error is-dismissible';
-                    $message = sprintf('<b>%s</b> requires <b>%s</b> plugin to be installed and activated.', $container['plugin_name'], $niceName);
+        add_action('admin_notices', function () use ($container) {
+            $class = 'notice notice-error is-dismissible';
+            $message = sprintf('<b>%s</b> requires <b>%s</b> plugin to be installed and activated.', $container['plugin_name'], 'Social Locker | BizPanda');
 
-                    printf('<div class="%1$s"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', $class, $message);
-                });
-            }
-        }
+            printf('<div class="%1$s"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', $class, $message);
+        });
     }
 }
