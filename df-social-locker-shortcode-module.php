@@ -7,18 +7,18 @@
  * Author URI:      https://www.diviframework.com
  * Text Domain:     df-social-locker-shortcode-module
  * Domain Path:     /languages
- * Version:         1.0.2
+ * Version:         1.1.0
  *
  * @package
  */
 
-if (! defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+if (!defined('ABSPATH')) {
+	exit; // Exit if accessed directly
 }
 
-define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_VERSION', '1.0.2');
+define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_VERSION', '1.1.0');
 define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_DIR', __DIR__);
-define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_URL', plugins_url('/'.basename(__DIR__)));
+define('DF_SOCIAL_LOCKER_SHORTCODE_MODULE_URL', plugins_url('/' . basename(__DIR__)));
 
 require_once DF_SOCIAL_LOCKER_SHORTCODE_MODULE_DIR . '/vendor/autoload.php';
 
@@ -29,9 +29,6 @@ $container['plugin_file'] = __FILE__;
 $container['plugin_dir'] = DF_SOCIAL_LOCKER_SHORTCODE_MODULE_DIR;
 $container['plugin_url'] = DF_SOCIAL_LOCKER_SHORTCODE_MODULE_URL;
 $container['plugin_slug'] = 'df-social-locker-shortcode-module';
-
-//register API license checks.
-$container->registerLicense();
 
 // activation hook.
 register_activation_hook(__FILE__, array($container['activation'], 'install'));
