@@ -21,7 +21,8 @@
     },
     "autoload" : {
         "psr-4" : {
-            "DF\\SocialLocker\\" : "src/"
+            "DF\\SocialLocker\\" : "src/",
+            "Social_Locker_Divi_Modules\\" : "includes/modules/"
         }
     }
 }

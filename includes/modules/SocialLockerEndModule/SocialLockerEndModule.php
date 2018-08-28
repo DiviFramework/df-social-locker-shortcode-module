@@ -1,5 +1,5 @@
 <?php
-namespace DF\SocialLocker;
+namespace Social_Locker_Divi_Modules\SocialLockerEndModule;
 
 use ET_Builder_Module;
 use ET_Builder_Element;
@@ -14,6 +14,13 @@ class SocialLockerEndModule extends ET_Builder_Module
     public $slug = 'df_social_locker_end';
     public $fields;
     protected $container;
+    public $vb_support = 'on';
+
+    protected $module_credits = array(
+        'module_uri' => 'https://www.diviframework.com',
+        'author'     => 'Divi Framework',
+        'author_uri' => 'https://www.diviframework.com',
+    );
 
     public function __construct($container)
     {
@@ -72,7 +79,7 @@ class SocialLockerEndModule extends ET_Builder_Module
     /**
      * Shortcode render.
      */
-    public function shortcode_callback($atts, $content = null, $function_name)
+    public function render($atts, $content = null, $function_name)
     {
         return '[/sociallocker]';
     }

@@ -1,5 +1,5 @@
 <?php
-namespace DF\SocialLocker;
+namespace Social_Locker_Divi_Modules\SocialLockerStartModule;
 
 use ET_Builder_Module;
 use ET_Builder_Element;
@@ -14,6 +14,13 @@ class SocialLockerStartModule extends ET_Builder_Module
     public $slug = 'df_social_locker_start';
     public $fields;
     protected $container;
+    public $vb_support = 'on';
+
+    protected $module_credits = array(
+        'module_uri' => 'https://www.diviframework.com',
+        'author'     => 'Divi Framework',
+        'author_uri' => 'https://www.diviframework.com',
+    );
 
     public function __construct($container)
     {
@@ -104,7 +111,7 @@ class SocialLockerStartModule extends ET_Builder_Module
     /**
      * Shortcode render.
      */
-    public function shortcode_callback($atts, $content = null, $function_name)
+    public function render($atts, $content = null, $function_name)
     {
         $atts = wp_parse_args($atts, array('id'));
         return sprintf("[sociallocker id='%s']", $atts['id']);
