@@ -116,4 +116,10 @@ class SocialLockerStartModule extends ET_Builder_Module
         $atts = wp_parse_args($atts, array('id'));
         return sprintf("[sociallocker id='%s']", $atts['id']);
     }
+
+
+    protected function _render_module_wrapper($output = '', $render_slug = '')
+    {
+        return $output;
+    }
 }

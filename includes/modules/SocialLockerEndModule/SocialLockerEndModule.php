@@ -83,4 +83,10 @@ class SocialLockerEndModule extends ET_Builder_Module
     {
         return '[/sociallocker]';
     }
+
+    
+    protected function _render_module_wrapper($output = '', $render_slug = '')
+    {
+        return $output;
+    }
 }

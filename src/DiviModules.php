@@ -6,7 +6,6 @@ namespace DF\SocialLocker;
  */
 class DiviModules
 {
-
     protected $container;
 
 
@@ -26,16 +25,15 @@ class DiviModules
         new \Social_Locker_Divi_Modules\SocialLockerEndModule\SocialLockerEndModule($this->container);
     }
 
-    public function register_extensions(){
-        new \Social_Locker_Divi_Modules\SocialLockerEndExtension($this->container);
-        new \Social_Locker_Divi_Modules\SocialLockerStartExtension($this->container);
+    public function register_extensions()
+    {
+        new \Social_Locker_Divi_Modules\SocialLockerShortcodeModuleExtension($this->container);
     }
 
-    public function wp_print_styles(){
-        // divi frontend builder styles. 
-        wp_dequeue_style( 'et_pb_df_social_locker_start-styles' );
-        wp_dequeue_style( 'et_pb_df_social_locker_end-styles' );
-        
-   }
-
+    public function wp_print_styles()
+    {
+        // divi frontend builder styles.
+        wp_dequeue_style('et_pb_df_social_locker_start-styles');
+        wp_dequeue_style('et_pb_df_social_locker_end-styles');
+    }
 }
