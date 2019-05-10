@@ -10,7 +10,7 @@ The Social Locker works by locking your most valuable site content behind a set 
 
 **It helps to improve social performance of your website, get more likes/shares, build quality followers and attract more traffic from social networks.**
 
-> Note: Headsup! We have moved on other things & in spirit of GPL2 & WordPress ecosystem we have released the source code. We won't be developing or support this plugin. 
+> Note: Headsup! We have moved on to other things & in spirit of GPL2 & WordPress ecosystem we have released the source code. We won't be developing or support this plugin. 
 
 ## Features
 
