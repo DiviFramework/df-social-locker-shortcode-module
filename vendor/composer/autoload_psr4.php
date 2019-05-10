@@ -8,6 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Social_Locker_Divi_Modules\\' => array($baseDir . '/includes/modules'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
-    'DiviFramework\\UpdateChecker\\' => array($vendorDir . '/diviframework/update-checker/src'),
     'DF\\SocialLocker\\' => array($baseDir . '/src'),
 );
