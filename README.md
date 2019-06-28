@@ -1,4 +1,4 @@
-# Social Locker Divi Module - [www.diviframework.com](https://www.diviframework.com/)
+# Social Locker Divi Module - [www.mrkwp.com](https://www.mrkwp.com/)
 
 Do you need help building organic traffic from social networks? This plugin allows you to **lock important content using the Divi Builder**.
 
